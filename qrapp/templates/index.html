@@ -1,12 +1,15 @@
 <html>
 <head>
     {% load static %}
-    <script src="{% static 'html5-qrcode.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+    <script src="{% static 'cdn/html5-qrcode.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}"> 
 </head>
 <body>
+    <div class="QR Code Scanner">
+        
+    </div>
     <h1>QR Code Scanner</h1>
-    <div id="reader"></div>
+    <div id="reader" class="reader"></div>
 
     <script>
         var html5QrcodeScanner = new Html5QrcodeScanner("reader", {
