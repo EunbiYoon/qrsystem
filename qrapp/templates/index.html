@@ -2,14 +2,19 @@
 <head>
     {% load static %}
     <script src="{% static 'cdn/html5-qrcode.min.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style3.css' %}"> 
 </head>
 <body>
-    <div class="QR Code Scanner">
-        
+    <div class="data-div">
+        <h1>Scanning Result</h1>
+        <a href="{% url 'review_url'%}">Review</a>
     </div>
-    <h1>QR Code Scanner</h1>
-    <div id="reader" class="reader"></div>
+
+    <div class="read-div">
+        <h1>QR Code Scanner</h1>
+        <div id="reader" class="reader"></div>
+        <div id="result"></div>
+    </div>
 
     <script>
         var html5QrcodeScanner = new Html5QrcodeScanner("reader", {
@@ -22,7 +27,7 @@
         function onScanSuccess(scannedData) {
             var form = document.createElement('form');
             form.setAttribute('method', 'post');
-            form.setAttribute('action', '{% url "home_url" %}');
+            form.setAttribute('action', '{% url "success_url" %}');
     
             var csrfToken = document.createElement('input');
             csrfToken.setAttribute('type', 'hidden');
@@ -43,8 +48,5 @@
         // Start the scanning process automatically
         html5QrcodeScanner.start();
     </script>
-    
-
-    
 </body>
 </html>

@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(158, 169, 162);
+}
+
+.data-div{
+    background-color: aquamarine;
+    text-align: center;
+}
+.data-div a{
+    text-decoration: none;
+    background-color: plum;
+    font-size:1.5rem;
+    font-weight:800;
+}
+.read-div{
+    background-color: antiquewhite;
+    text-align: center;
+}
+#reader{
+    background-color: pink;
+    width:50%;
+    margin:auto;
+}

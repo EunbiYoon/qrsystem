@@ -9,7 +9,6 @@ def homeView(request):
         
         qrcode_data=QRCodeData(data=scanned_data)
         qrcode_data.save()
-
         return render(request,'success.html')
     else:
         return render(request, 'index.html')
@@ -17,3 +16,7 @@ def homeView(request):
 def reviewView(request):
     qrcode_data=QRCodeData.objects.all()
     return render(request,'review.html',{'qrcode_data':qrcode_data})
+
+def successView(request):
+    return 
+    return render(request,'success.html')
