@@ -18,5 +18,4 @@ def reviewView(request):
     return render(request,'review.html',{'qrcode_data':qrcode_data})
 
 def successView(request):
-    return 
     return render(request,'success.html')
